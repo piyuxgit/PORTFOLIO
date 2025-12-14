@@ -1,180 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piyush Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #F4F6F8;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif;}
+    body { background:#f0f3f5; color:#333; line-height:1.6;}
+    a { text-decoration:none; color:#2c5364; transition:0.3s;}
+    a:hover { color:#0f2027; }
 
+    /* Header */
     header {
-      background-color: #1E2A38;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+      background:#203a43;
+      color:white;
+      padding:40px 20px;
+      text-align:center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    nav { margin-top:15px; }
+    nav a {
+      margin:0 15px;
+      font-weight:700;
+      color:white;
+      padding:5px 10px;
+      border-radius:5px;
+      transition:0.3s;
+      position:relative;
     }
+    /* Hover effect for nav */
+    nav a::after {
+      content:'';
+      position:absolute;
+      width:0%;
+      height:2px;
+      background:#f0f3f5;
+      left:0;
+      bottom:0;
+      transition:0.3s;
+    }
+    nav a:hover::after { width:100%; }
 
     section {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width:900px;
+      margin:40px auto;
+      padding:25px 20px;
+      background:white;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      text-decoration: underline;
-      color: #2C3E50;
+    section h2 {
+      margin-bottom:20px;
+      border-bottom:2px solid #2c5364;
+      padding-bottom:5px;
+      color:#203a43;
     }
 
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+    ul { padding-left:20px; }
+    li { margin-bottom:10px; }
 
-    ul {
-      padding-left: 20px;
+    /* Achievement & Project Button */
+    .btn {
+      padding:10px 20px;
+      background:#203a43;
+      color:white;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      margin-top:10px;
+      transition:0.3s;
+      position:relative;
     }
+    .btn:hover { background:#2c5364; }
 
-    img {
-      border-radius: 8px;
-      margin-top: 10px;
+    /* Image Tooltip on Hover */
+    .btn img {
+      display:none;
+      position:absolute;
+      top:40px;
+      left:50%;
+      transform:translateX(-50%);
+      max-width:250px;
+      border-radius:8px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      z-index:10;
     }
-
-    a {
-      color: #0077b5;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    .btn:hover img { display:block; }
 
     footer {
-      background-color: #1E2A38;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      text-align:center;
+      background:#203a43;
+      color:white;
+      padding:25px 20px;
+      margin-top:30px;
     }
+    footer a { color:#ccc; }
+    footer a:hover { color:white; }
 
-    footer a {
-      color: #ccc;
-    }
-
-    footer a:hover {
-      color: white;
+    @media(max-width:768px){
+      header h1{ font-size:2rem; }
     }
   </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-      </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hello!  Welcome to my portfolio<br>
-     
-      This side Piyush here. I'm a BTECH Second Year Computer Science Engineering student at Parul University. 
-With a strong passion for technology and innovations , I'm always eager to explore new ideas and concepts. This curiosity help me to learn and grow. 
-I'm passionate about learning and sharing knowledge with others.
-My strong communication skill help me break down complex concepts and problems into simple and understandable language. 
- <br>
-With a keen interest in innovative technology, I enjoy exploring:
-<br>
- - new tech trends
- <br>
- - web development 
- <br>
+<header>
+  <h1>Piyush Kumar</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
- - AI and Machine learning 
- <br>
- So, Lets connect and exchange ideas!
- <br>
-I'm open to :
- - collaboration and projects
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m Piyush Kumar, a B.Tech CS student passionate about software development, AI, and tech innovations.  
+    I enjoy building projects, learning emerging technologies, and collaborating with like-minded professionals.  
+    My goal is to create solutions that make an impact and push the boundaries of technology.
+  </p>
+</section>
 
-Feel free to reach out!
-    </p>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Python | Java | C</li>
+    <li>Web Development (HTML, CSS, JavaScript)</li>
+    <li>Database Management (SQL, DBMS)</li>
+    <li>AI & Machine Learning Basics</li>
+    <li>Problem Solving & Algorithms</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Details</h2>
-    <p><strong>Name:</strong> Piyush Kumar</p>
-    <p><strong>Age:</strong> 20</p>
-    <p><strong>Address:</strong> Parul University, Vadodara, Gujarat</p>
-    <p><strong>Email:</strong> <a href="mailto:piyushkpandey91@gmail.com">piyushkpandey91@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/piyush-kumar-44a65b336" target="_blank">My LinkedIn</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Piyush-kumar-pu" target="_blank">GitHub Profile</a></p>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <button class="btn">
+    Portfolio Website
+    <img src="website-preview.jpeg" alt="Portfolio Website">
+  </button>
+  <button class="btn">
+    Another Project
+    <img src="project2.jpeg" alt="Project 2">
+  </button>
+</section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>PYTHON</li>
-      <li>JAVA</li>
-      <li>DBMS</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>C</li>
-    </ul>
-  </section>
-  <section>
-    <h2>My Projects</h2>
-    <ul>
-        <li> Website - <a href="http://127.0.0.1:5500/website/index.html" target="_blank">VISIT WEBSITE</a>
-        </li>
-    </ul>
-  </section>
+<section id="achievements">
+  <h2>Achievements</h2>
+  <button class="btn">
+    Intern at Shadowfox
+    <img src="ol.jpeg" alt="Shadowfox">
+  </button>
+  <button class="btn">
+    Campus Ambassador at IMUN
+    <img src="imun.jpeg" alt="IMUN">
+  </button>
+  <button class="btn">
+    HTML & CSS Certification
+    <img src="html.jpg" alt="HTML CSS Cert">
+  </button>
+  <button class="btn">
+    JavaScript Certification
+    <img src="js.jpeg" alt="JS Cert">
+  </button>
+  <button class="btn">
+    CDC FunFest Pre-finalist
+    <img src="WhatsApp Image 2025-01-29 at 21.29.01.jpg" alt="FunFest">
+  </button>
+  <button class="btn">
+    HTML CSS Bootcamp
+    <img src="lestsupg.jpg" alt="Bootcamp">
+  </button>
+</section>
 
-  <section>
-    <h2>Achievements</h2>
-    <p>Here are some of my achievements:</p>
-    <ul>
-      <li>
-        <h3>Intern at Shadowfox</h3>
-        <a href="ol.jpeg" target="_blank"><img src="ol.jpeg" alt="Achievement 1" width="200"></a>
-      </li>
-      <li>
-        <h3>Campus Ambassador Intern at IMUN</h3>
-        <a href="imun.jpeg" target="_blank"><img src="imun.jpeg" alt="Achievement 2" width="200" height="200"></a>
-      </li>
-      <li>
-        <h3>Certified in HTML & CSS</h3>
-        <a href="html.jpg" target="_blank"><img src="html.jpg" alt="Achievement 3" width="200"></a>
-      </li>
-      <li>
-        <h3>Certified in JavaScript</h3>
-        <a href="js.jpeg" target="_blank"><img src="js.jpeg" alt="Achievement 4" width="200"></a>
-      </li>
-      <li>
-        <h3>Pre-finalist at CDC Global Speaking FunFest</h3>
-        <a href="WhatsApp Image 2025-01-29 at 21.29.01.jpg" target="_blank"><img src="WhatsApp Image 2025-01-29 at 21.29.01.jpg" alt="Achievement 5" width="200"></a>
-      </li>
-      <li>
-        <h3>HTML CSS Bootcamp by Let's Upgrade</h3>
-        <a href="lestsupg.jpg" target="_blank"><img src="lestsupg.jpg"alt="Achievement 6" width="200"></a>
-      </li>
-    </ul>
-  </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>📞 <a href="tel:+919693965399">+91 9693965399</a></p>
+  <p>✉️ <a href="mailto:piyushkpandey91@gmail.com">piyushkpandey91@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/piyush-kumar-44a65b336" target="_blank">Piyush Kumar</a></p>
+  <p>GitHub: <a href="https://github.com/piyuxgit" target="_blank">piyuxgit</a></p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Piyush Kumar. All rights reserved.</p>
-    <p><a href="tel:+919693965399">📞 Call +91 9693965399</a></p>
-    <p><a href="mailto:piyushkpandey91@gmail.com">✉️ Email Me</a></p>
-  </footer>
+<footer>
+  &copy; 2025 Piyush Kumar. All rights reserved.
+</footer>
+
 </body>
 </html>
